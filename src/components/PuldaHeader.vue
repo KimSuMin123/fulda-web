@@ -2,7 +2,7 @@
     <div id = "Header">
         <div id = "HeaderMenuBar">
             <div id = "LogoImg">
-                <img class="LogoImg" src="../img/PuldaLogo.png" />
+                <img class="LogoImg" src="../img/Header/PuldaLogo.png" />
             </div>
             <div id = "HeaderMenu">
                 <nav>
@@ -13,10 +13,10 @@
             </div>
         </div>
         <div id ="HeaderMain">
-            <div id="MainImg">
-                <img class="MainImg" src="../img/HeaderMain.png" />
+            <div id="MainText">공부가 필요한 순간, 언제 어디서나</div>
+            <div id = "ChannelTalkImg">
+                <img class="ChannelTalkImg" src="../img/Header/ChannelTalk.png" />
             </div>
-            <div id="MainText"></div>
         </div>
     </div>    
   
@@ -57,19 +57,24 @@
         font-size: 16px;
         margin-right : 139px;
     }
-    #main{      
-        display: flex;
-        align-items: center;
-        width: 1920px;
-        height: 1005px;
-        
-    }
+     
     span.introduce{
         color: black;
         /*text-underline-position : 3px #1e1e1e;*/ 
     }
+   #HeaderMain{
+        background: url('../img/Header/HeaderMain.png') center center;
+        background-size: cover;
+        display: flex;
+        width: 1920px;
+        height: 1005px;
+        margin-top: 75px;
+    }
 
-    
+    .ChannelTalkImg{
+        margin-top:  30px;
+        margin-left: 30px;
+    }
     
   
     

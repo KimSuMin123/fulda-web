@@ -6,10 +6,12 @@
     <PuldaIntroduceTwo />              
     <PuldaIntroduceFunctionOne />
     <PuldaIntroduceFunctionTwo />
+    <PuldaDreamFill />
     <PuldaReview /> 
-    <PuldaPremium />   
+    <PuldaPremium />
+    <PuldaDevice />   
     <PuldaFooter />
-   </div>
+  </div>
 </template>
 
 <script>
@@ -19,8 +21,10 @@ import PuldaIntroduceOne from './components/PuldaIntroduceOne.vue';
 import PuldaIntroduceTwo from './components/PuldaIntroduceTwo.vue';
 import PuldaIntroduceFunctionOne from './components/PuldaIntroduceFunctionOne.vue';
 import PuldaIntroduceFunctionTwo from './components/PuldaIntroduceFunctionTwo.vue';
+import PuldaDreamFill from './components/PuldaDreamFill.vue';
 import PuldaReview from './components/PuldaReview.vue';
 import PuldaPremium from './components/PuldaPremium.vue';
+import PuldaDevice from './components/PuldaDevice.vue';
 import PuldaFooter from './components/PuldaFooter.vue';
 
 export default {
@@ -32,8 +36,10 @@ export default {
     PuldaIntroduceTwo,
     PuldaIntroduceFunctionOne,
     PuldaIntroduceFunctionTwo,
+    PuldaDreamFill,
     PuldaReview,
     PuldaPremium,
+    PuldaDevice,
     PuldaFooter
 }
 }

@@ -1,5 +1,10 @@
 <template>
-    <h1>footer</h1>
+    <div class = "Topfooter">
+    
+    </div>
+    <div class = "Bottomfooter">
+      
+    </div>
 </template>
 <script>
 
