@@ -57,14 +57,13 @@
         font-size: 50px;
         font-weight: 700;
         line-height: 60px;
-        letter-spacing: 0em;
         text-align: left;
         margin-top: 57px;
         margin-left: 360px;
     }
    #IntroduceOneBottom{
         font-family: Pretendard;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 30px; 
         text-align: left;

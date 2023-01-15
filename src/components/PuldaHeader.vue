@@ -1,4 +1,4 @@
- <template>
+<template>
     <div id = "Header">
         <div id = "HeaderMenuBar">
             <div id = "LogoImg">
@@ -14,13 +14,26 @@
         </div>
         <div id ="HeaderMain">
             <div id="MainText">공부가 필요한 순간, 언제 어디서나</div>
+            <div class="Download">
+                <div id= "AppStoreButton">
+                    <img id="AppStoreImg" src="../img/Footer/ColorAppStore.png" />
+                    <p id="AppStoreText">App Store</p>
+                </div> 
+                <div id= "GoogleButton">
+                    <img id="GoogleImg" src="../img/Footer/ColorGooglePlay.png" />
+                    <p id="GooglePlayText">Google Play</p>
+                </div>    
+            </div>
+            <div id = "DownButton">
+                <img id = "DownButtonImg" src="../img/Header/DownButton.png"/>
+            </div> 
             <div id = "ChannelTalkImg">
                 <img class="ChannelTalkImg" src="../img/Header/ChannelTalk.png" />
             </div>
         </div>
     </div>    
   
- </template>
+</template>
  
  <script>
  export default {
@@ -30,7 +43,8 @@
  
  <style>
     *{
-        margin: 0 0;  
+        margin: 0 0; 
+        text-align: left; 
     }
     #Header{
         width: 1920px; 
@@ -57,23 +71,88 @@
         font-size: 16px;
         margin-right : 139px;
     }
-     
-    span.introduce{
-        color: black;
-        /*text-underline-position : 3px #1e1e1e;*/ 
-    }
+
    #HeaderMain{
-        background: url('../img/Header/HeaderMain.png') center center;
+        background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+        url('../img/Header/HeaderMain.png') center center;
         background-size: cover;
-        display: flex;
+        background-color: black;
         width: 1920px;
         height: 1005px;
         margin-top: 75px;
     }
-
+    #MainText{
+        padding-left: 628px;
+        padding-top: 370px;
+        font-family: Pretendard;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 50px;
+        color: #ffffff;
+    }
+    .Download{
+        margin-top: 62px;
+        display: flex;
+        opacity: 90%;
+    }
+    #AppStoreButton{
+        width: 197px;
+        height: 54px;
+        border: #1e1e1e;
+        border-radius: 10px;
+        margin-left: 760px;
+        display: flex;
+        background-color: #0a1621; 
+    }
+    #AppStoreImg{
+        margin-left: 48px;
+        margin-top: 17px;
+        display: flex;
+        width: 17px;
+        height: 21px;
+    }
+    #AppStoreText{
+        padding-left: 8px;
+        padding-top: 19px;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        color: #ffffff;
+    }
+    #GoogleButton{
+        width: 197px;
+        height: 54px;
+        border: #1e1e1e;
+        border-radius: 10px;
+        margin-left: 5px;
+        display: flex;
+        background-color: #0a1621; 
+    }
+    #GoogleImg{
+        margin-left: 43px;
+        margin-top: 18px;
+        display: flex;
+        width: 17px;
+        height: 19px;
+    }
+    #GooglePlayText{
+        padding-left: 8px;
+        padding-top: 19px;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        color: #ffffff;
+    }
+    #DownButton{
+        margin-top: 292px;
+        margin-left: 941px;
+    }
     .ChannelTalkImg{
-        margin-top:  30px;
-        margin-left: 30px;
+        position: fixed;
+        margin-top: 67px;
+        margin-left: 1822px;
     }
     
   

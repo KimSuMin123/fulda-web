@@ -79,6 +79,8 @@
         height: 264px;
         background-color: #F8FAFC;
         border-radius: 30px;
+        position: relative;
+        animation: fadeInRight 1s;
     }
     #StudentNickname{
         padding-left: 62px;
@@ -92,4 +94,16 @@
         padding-top: 20px;
         padding-left: 62px;
     }
+   
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+ 
 </style>

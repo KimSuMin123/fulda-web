@@ -1,12 +1,10 @@
 <template>
     <div class = "Device">
         <p id ="DeviceTopText">
-            다양한 기기 지원으로 공부도 더 편리하게 해요
+            다양한 기기 지원으로 공부도 더 편리하게 해요.
         </p>
         <div class="DeviceImg">
-            <img id="Device1" src="../img/Device/Device1.png" />
-            <img id="Device2" src="../img/Device/Device2.png" />
-            <img id="Device3" src="../img/Device/Device3.png" />
+            <img id="DeviceAll" src="../img/Device/DeviceAll.png" />
         </div>
     </div>
 </template>
@@ -29,5 +27,10 @@
         color: #FFF;
         padding-top: 230px;
     }
-    
+    #DeviceAll{
+        margin-top: 71px;
+        margin-left: 360px;
+        width: 1200px;
+        height: 1132px;
+    }
 </style>
