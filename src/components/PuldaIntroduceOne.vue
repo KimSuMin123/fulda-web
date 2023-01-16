@@ -1,11 +1,11 @@
 <template>
     <div class = "IntroduceOne">
         <div class="IntroduceOneLeft">
-            <p id ="IntroduceOneTop">
-                학원도 다니고,<br>
-                과외도 하고,<br>
-                인강도 듣는데.<br>
-            </p>
+            <div id="IntroduceOneTop">
+                <p id ="IntroduceOneTopOne"> 학원도 다니고,<br></p>
+                <p id ="IntroduceOneTopTwo"> 과외도 하고,<br></p>   
+                <p id ="IntroduceOneTopThree"> 인강도 듣는데.<br></p>
+            </div>
             <p id ="IntroduceOneMid">
                 성적이 왜 안 오르지?
             </p>
@@ -28,6 +28,7 @@
         width: 1920px;
         height: 976px; 
     }
+    
     .IntroduceOneLeft{
         background-color: #fff;
         height: 976px; 
@@ -42,6 +43,14 @@
         float: right;
         text-align: left;
     }
+    .animatable {
+        visibility: hidden; 
+        animation-play-state: paused;
+    }
+    .animated {
+        animation-name: fadeInUp; 
+        visibility: visible; 
+    }
     #IntroduceOneTop{
         font-family: Pretendard;
         font-size: 50px;
@@ -52,6 +61,17 @@
         margin-top: 97px;
         margin-left: 360px;
     }
+    #IntroduceOneTopOne{
+        animation: fadeInUp 1s;
+    }
+    #IntroduceOneTopTwo{
+        animation: fadeInUp 1s;
+        animation-delay: 1s;
+    }
+    #IntroduceOneTopThree{
+        animation: fadeInUp 1s;
+        animation-delay: 2s;
+    }
     #IntroduceOneMid{
         font-family: Pretendard;
         font-size: 50px;
@@ -60,6 +80,8 @@
         text-align: left;
         margin-top: 57px;
         margin-left: 360px;
+        animation: fadeInUp 1s;
+        animation-delay: 3s;
     }
    #IntroduceOneBottom{
         font-family: Pretendard;
@@ -69,8 +91,26 @@
         text-align: left;
         margin-top: 105px;
         margin-left: 360px;
+        animation: fadeInUp 1s;
+        animation-delay: 4s;
     }
     #Introduce1Img{
         margin-left: 118px;
+        animation: fadeInUp 2s;
+        animation-delay: 5s;
     }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+        50%{
+            opacity: 0.5;
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+   
 </style>

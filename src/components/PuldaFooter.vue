@@ -10,12 +10,14 @@
             <div id= "AppStoreButton">
                 <a id="AppStoreLink" href="https://apps.apple.com/app/id1530892838">
                     <img id="AppStoreImg" src="../img/Footer/ColorAppStore.png" />
+                    App Store
                 </a>
-                <p id="AppStoreText">App Store</p>
             </div> 
             <div id= "GoogleButton">
-                <img id="GoogleImg" src="../img/Footer/ColorGooglePlay.png" />
-                <p id="GooglePlayText">Google Play</p>
+                <a id="GoogleLink" href="https://play.google.com/store/apps/details?id=com.filledu.pulda2">
+                    <img id="GoogleImg" src="../img/Footer/ColorGooglePlay.png" />
+                    Google Play
+                </a>
             </div>    
         </div>
     </div>
@@ -34,11 +36,18 @@
             </div>
         </div>
         <div id="CompanySns">
-            <img id="Instagram" src="../img/Footer/Instagram.png" />
-            <img id="NaverBlog " src="../img/Footer/NaverBlog.png" />
+            <a id="" href="https://www.instagram.com/pulda_official/">
+                <img id="Instagram" src="../img/Footer/Instagram.png" />
+            </a>
+            <a id ="" href="https://blog.naver.com/support_filledyou">
+                <img id="NaverBlog " src="../img/Footer/NaverBlog.png" />
+            </a>
             <div id="SeeMoreText">
-                <p id="SeeMoreText1">관련 사이트</p>
-                <p id="SeeMoreText2">+</p>
+         
+                        <p id="SeeMoreText1">관련 사이트</p>
+                        <p id="SeeMoreText2">+</p>
+                 
+            
             </div>
         </div>
     </div>
@@ -89,20 +98,28 @@
     }
     #AppStoreImg{
         margin-left: 48px;
-        margin-top: 17px;
+        margin-right: 8px;
+        margin-bottom:5px;
         display: flex;
         width: 17px;
         height: 21px;
     }
-    #AppStoreText{
-        padding-left: 8px;
-        padding-top: 19px;
+    #AppStoreLink{
+        align-items: center;
+        display: flex;
         font-family: Pretendard;
         font-size: 16px;
         font-weight: 700;
         line-height: 16px;
         color: #1e1e1e;
+        text-decoration: none;
+        width: 197px;
+        height: 54px;
     }
+    #AppStoreButton :hover{
+        background-color: #f3f3f3;
+    }
+   
     #GoogleButton{
         width: 197px;
         height: 54px;
@@ -114,19 +131,26 @@
     }
     #GoogleImg{
         margin-left: 43px;
-        margin-top: 18px;
+        margin-right: 5px;
+
         display: flex;
         width: 17px;
         height: 19px;
     }
-    #GooglePlayText{
-        padding-left: 5px;
-        padding-top: 19px;
+    #GoogleLink{
+        align-items: center;
+        display: flex;
         font-family: Pretendard;
         font-size: 16px;
         font-weight: 700;
         line-height: 16px;
         color: #1e1e1e;
+        text-decoration: none;
+        width: 197px;
+        height: 54px;
+    }
+    #GoogleButton :hover{
+        background-color: #f3f3f3;
     }
     .CompanyInfo{
         padding-top: 334px;
@@ -150,14 +174,7 @@
     #CompanyMenu{
         margin-top: 10px;
     }
-    a{
-        text-decoration: none;
-        font-family: Pretendard Variable;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 17px;
-        color: #D4D4D4;
-    }
+
     #CompanySns{
         margin-top: 36px;
         margin-left: 360px;
@@ -193,4 +210,12 @@
         padding-left: 65px;
         padding-top: 8px;
     }
+    a{
+        text-decoration: none;
+        font-family: Pretendard Variable;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        color: #D4D4D4;
+    }  
 </style>

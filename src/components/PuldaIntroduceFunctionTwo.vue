@@ -20,7 +20,7 @@
     <div class = "Scholarship">
         <div class="ScholarshipRight">
             <p id ="ScholarshipTop">
-                <img id="Scholarship" src="../img/Scholarship/ScholarshipCoinIcon.png"/>
+                <img id="ScholarshipCoinIcon" src="../img/Scholarship/ScholarshipCoinIcon.png"/>
                 풀다 공테크 #공부하고 용돈도 받자
             </p>
             <p id ="ScholarshipMid">
@@ -116,6 +116,7 @@
     .ScholarshipCoinIcon{
         height: 16px;
         padding-right: 10px;
+        animation: bird 90s;
     }
     #ScholarshipTop{
         color: #2A4FD4;
@@ -143,8 +144,30 @@
         margin-left: 67px;
         margin-top: 45px;
     }
+    @keyframes coinMove {
+        from {
+            transform: translateY(30px);
+        }
+        25% {
+            transform: translateY(-15px);
+        }
+        50% {
+            transform: translateY(-30px);
+        }
+        75% {
+            transform: translateY(-15px);
+        }
+        to {
+            transform: translateY(30px);
+        }
+    }
     #ScholarshipImg{
         margin-left: 433px;
+        animation-name: coinMove;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        transition-timing-function: linear;
+        transition: all 1s;
     }
 
 </style>

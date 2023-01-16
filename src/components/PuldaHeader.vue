@@ -2,7 +2,9 @@
     <div id = "Header">
         <div id = "HeaderMenuBar">
             <div id = "LogoImg">
-                <img class="LogoImg" src="../img/Header/PuldaLogo.png" />
+                <a id="main" href="PuldaHeader.vue">
+                    <img class="LogoImg" src="../img/Header/PuldaLogo.png" />
+                </a>
             </div>
             <div id = "HeaderMenu">
                 <nav>
@@ -13,17 +15,21 @@
             </div>
         </div>
         <div id ="HeaderMain">
-            <div id="MainText">공부가 필요한 순간, 언제 어디서나</div>
+            <div id="MainText">공부가 필요한 순간, 언제 어디서나</div> 
             <div class="Download">
-                <div id= "AppStoreButton">
+            <div id= "AppStoreButton">
+                <a id="AppStoreLink" href="https://apps.apple.com/app/id1530892838">
                     <img id="AppStoreImg" src="../img/Footer/ColorAppStore.png" />
-                    <p id="AppStoreText">App Store</p>
-                </div> 
-                <div id= "GoogleButton">
+                    App Store
+                </a>
+            </div> 
+            <div id= "GoogleButton">
+                <a id="GoogleLink" href="https://play.google.com/store/apps/details?id=com.filledu.pulda2">
                     <img id="GoogleImg" src="../img/Footer/ColorGooglePlay.png" />
-                    <p id="GooglePlayText">Google Play</p>
-                </div>    
-            </div>
+                    Google Play
+                </a>
+            </div>    
+        </div>
             <div id = "DownButton">
                 <img id = "DownButtonImg" src="../img/Header/DownButton.png"/>
             </div> 
@@ -37,8 +43,11 @@
  
  <script>
  export default {
+   methods: {
+   }
+}
+    
  
- }
  </script>
  
  <style>
@@ -81,6 +90,7 @@
         height: 1005px;
         margin-top: 75px;
     }
+   
     #MainText{
         padding-left: 628px;
         padding-top: 370px;
@@ -93,7 +103,7 @@
     .Download{
         margin-top: 62px;
         display: flex;
-        opacity: 90%;
+        
     }
     #AppStoreButton{
         width: 197px;
@@ -103,22 +113,31 @@
         margin-left: 760px;
         display: flex;
         background-color: #0a1621; 
+       
     }
     #AppStoreImg{
         margin-left: 48px;
-        margin-top: 17px;
+        margin-right: 8px;
+        margin-bottom:5px;
         display: flex;
         width: 17px;
         height: 21px;
     }
-    #AppStoreText{
-        padding-left: 8px;
-        padding-top: 19px;
+   
+    #AppStoreLink{
+        align-items: center;
+        display: flex;
         font-family: Pretendard;
         font-size: 16px;
         font-weight: 700;
         line-height: 16px;
         color: #ffffff;
+        text-decoration: none;
+        width: 197px;
+        height: 54px;
+    }
+    #AppStoreButton :hover{
+        opacity: 0.5 ;
     }
     #GoogleButton{
         width: 197px;
@@ -131,23 +150,62 @@
     }
     #GoogleImg{
         margin-left: 43px;
-        margin-top: 18px;
+        margin-right: 5px;
         display: flex;
         width: 17px;
         height: 19px;
     }
-    #GooglePlayText{
-        padding-left: 8px;
-        padding-top: 19px;
+    #GoogleLink{
+        align-items: center;
+        display: flex;
         font-family: Pretendard;
         font-size: 16px;
         font-weight: 700;
         line-height: 16px;
+        text-decoration: none;
         color: #ffffff;
     }
+    #GoogleButton :hover{
+        opacity: 0.5;
+    }
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateZ(0);
+        }
+    }
+    @keyframes arrowMove {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        30% {
+            opacity: 1;
+            transform: translateY(-15px);
+        }
+        60% {
+            opacity: 1;
+            transform: translateY(15px);
+        }
+       to {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    
+    }
+ 
     #DownButton{
         margin-top: 292px;
         margin-left: 941px;
+        position: relative;
+        animation: arrowMove 2s;
+        animation-iteration-count: infinite;
+        transition-timing-function: linear;
+        transition: all 2s;
     }
     .ChannelTalkImg{
         position: fixed;

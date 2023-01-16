@@ -35,11 +35,16 @@
             </p>
         </div>
         <div class="AiStudyLeft">
-            <img id="AiStudyImg" src="../img/AiStudy/AiStudy1.png"/>
+            <div id="AiStudyImg"></div>
         </div>
     </div>
 </template>
 <script>
+    export default{
+        methods: {
+      
+        }
+    }
 
 </script>
 <style scoped>
@@ -146,6 +151,17 @@
     #AiStudyImg{
        margin-top: 59px;  
        margin-left: 387px;
+       width: 502px;
+       height: 274px;
+       animation-name: ImgMove;
+       animation-duration: 10s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
     }   
-
+    @keyframes ImgMove {
+        0%   {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy1.png);} 
+        25%   {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy1.png);} 
+        75%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy2.png);}      
+        100%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy2.png);}
+    }
 </style>
