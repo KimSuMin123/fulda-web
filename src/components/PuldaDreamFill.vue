@@ -49,7 +49,7 @@
 <style scoped>
 .DreamFill{
     width: 1920px;
-    height: 1288px; 
+    height: 1000px; 
     text-align: left;
 }
 .TopText{

@@ -146,19 +146,13 @@
     }
     @keyframes coinMove {
         from {
-            transform: translateY(30px);
-        }
-        25% {
-            transform: translateY(-15px);
+            transform: translateY(15px);
         }
         50% {
-            transform: translateY(-30px);
-        }
-        75% {
             transform: translateY(-15px);
         }
         to {
-            transform: translateY(30px);
+            transform: translateY(15px);
         }
     }
     #ScholarshipImg{

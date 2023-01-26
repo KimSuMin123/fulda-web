@@ -42,6 +42,7 @@
             <a id ="" href="https://blog.naver.com/support_filledyou">
                 <img id="NaverBlog " src="../img/Footer/NaverBlog.png" />
             </a>
+        
             <div id="SeeMoreText">
          
                         <p id="SeeMoreText1">관련 사이트</p>

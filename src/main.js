@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
+// import Vue from 'vue';
 import App from './App.vue'
-import store from './store'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
-createApp(App).use(store).mount('#app')
+// Vue.use(AOS)
+
+const app = createApp(App);
+app.use(AOS)
+AOS.init();
+app.mount('#app')

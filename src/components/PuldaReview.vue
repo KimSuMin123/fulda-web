@@ -1,5 +1,5 @@
 <template>
-    <div class = "Review">
+    <div id = "Review" class = "Review">
         <div class="ReviewLeft">
             <img id ="ReviewImg" src="../img/Review/review.png"/>
             <div class ="ReviewTop">
@@ -14,7 +14,8 @@
             </div>
         </div>
         <div class="ReviewRight">
-            <div id="ReviewBox">
+            <div id="ReviewBox" data-aos="fade-left" 
+                data-aos-duration="700">
                 <p id="StudentNickname">
                     풀다 학생 **dstg
                 </p>
@@ -39,6 +40,7 @@
     .Review{
         width: 1920px;
         height: 655px;
+      padding-top: 288px;
     }
     .ReviewLeft{
         background-color: #fff;

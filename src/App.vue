@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+ <div id="app">
     <PuldaHeader />
     <PuldaStart />
     <PuldaIntroduceOne />
@@ -26,7 +26,6 @@ import PuldaReview from './components/PuldaReview.vue';
 import PuldaPremium from './components/PuldaPremium.vue';
 import PuldaDevice from './components/PuldaDevice.vue';
 import PuldaFooter from './components/PuldaFooter.vue';
-
 export default {
   name: 'App',
   components: {
@@ -53,5 +52,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+}
+#app::-webkit-scrollbar{
+  display: none;
+  overflow-x: none;
 }
 </style>

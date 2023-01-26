@@ -160,8 +160,9 @@
     }   
     @keyframes ImgMove {
         0%   {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy1.png);} 
-        25%   {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy1.png);} 
-        75%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy2.png);}      
-        100%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy2.png);}
+        25%   {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy2.png);} 
+        50%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy2.png);} 
+        70%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy1.png);}      
+        100%  {left:0px; top:0px;background-image: url(../img/AiStudy/AiStudy1.png);}
     }
 </style>

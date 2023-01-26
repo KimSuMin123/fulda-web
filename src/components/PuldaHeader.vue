@@ -8,13 +8,25 @@
             </div>
             <div id = "HeaderMenu">
                 <nav>
-                    <span class="introduce">풀다 소개</span>
-                    <span class="review">REVIEW</span>
-                    <span class="premium">프리미엄서비스</span>
+                    <span class="introduce">
+                        <a href="#Header">
+                            풀다 소개
+                        </a>
+                    </span>
+                    <span class="review">
+                        <a href="#Review">
+                            REVIEW
+                        </a>
+                    </span>
+                    <span class="premium">
+                        <a href="#Premium">
+                            프리미엄서비스
+                        </a>
+                    </span>
                 </nav>
             </div>
         </div>
-        <div id ="HeaderMain">
+        <div id ="HeaderMain1">                      
             <div id="MainText">공부가 필요한 순간, 언제 어디서나</div> 
             <div class="Download">
             <div id= "AppStoreButton">
@@ -37,13 +49,19 @@
                 <img class="ChannelTalkImg" src="../img/Header/ChannelTalk.png" />
             </div>
         </div>
+        <div id ="HeaderMain2">
+        </div>
     </div>    
   
 </template>
  
  <script>
+ 
  export default {
    methods: {
+    goPage() {
+        console.log('go')
+    }
    }
 }
     
@@ -51,6 +69,7 @@
  </script>
  
  <style>
+
     *{
         margin: 0 0; 
         text-align: left; 
@@ -73,15 +92,11 @@
         margin-right: 145px;
     }
     span{                            
-        color: #737373;
-        font-family: 'Pretendard';
-        font-style: normal;
-        font-weight: 700;
         font-size: 16px;
         margin-right : 139px;
     }
 
-   #HeaderMain{
+   #HeaderMain1{
         background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
         url('../img/Header/HeaderMain.png') center center;
         background-size: cover;
@@ -90,6 +105,23 @@
         height: 1005px;
         margin-top: 75px;
     }
+    #HeaderMain2{
+        background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+        url('../img/Header/HeaderMain.png') center center;
+        background-size: cover;
+        background-color: black;
+        margin-top: 50px;
+        width:1200px;
+        height: 224px;
+        margin-left: 360px;
+    }
+
+   
+    /* #HeaderMain:hover {
+        transform: scale(0.7);
+        transition: .9s;
+    } */
+
    
     #MainText{
         padding-left: 628px;
@@ -212,7 +244,13 @@
         margin-top: 67px;
         margin-left: 1822px;
     }
-    
-  
+    a{
+        text-decoration: none;
+        color: #737373;
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+    }
+   
     
  </style>         

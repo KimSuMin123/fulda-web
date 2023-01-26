@@ -1,5 +1,5 @@
 <template>
-    <div class = "Premium">
+    <div id = "Premium" class = "Premium">
         <div class ="PremiumTopText">
             <p id = PremiumTopText>
                 풀다 프리미엄 서비스로<br>
