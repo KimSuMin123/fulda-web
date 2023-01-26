@@ -6,19 +6,43 @@
             </a>
         </div>
         <div id="DownloadTop">
-            <div id="DownloadTopText">
+            <div id="DownloadTopText" @click="myFunction()">
                 앱 다운로드
+                <div v-if="andriod">
+                    <a href='https://play.google.com/store/apps/details?id=com.filledu.pulda2&pli=1'>앱 다운로드</a>
+                </div>
+                <div v-else-if="ipone">
+                    <a href='https://https://apps.apple.com/app/id1530892838'>앱 다운로드</a>
+                </div>
             </div>
         </div>
-        
+        <div id = HiddenMenu>
+            <input class="burger-check" type="checkbox" id="burger-check" />
+            <label class="burger-icon" for="burger-check"><span class="burger-sticks"></span></label>
+            <div class="menu">
+                <div style="width: 360px;">
+                    <br>
+                    <a href="#" id="HiddenMenuContent1">풀다 소개</a><br>
+                    <a href="#Review" id="HiddenMenuContent1">REVIEW</a><br>
+                    <a href="#Premium" id="HiddenMenuContent2">프리미엄서비스</a>
+                </div>
+            </div>
+
+        </div>
     </div>
     <div class ="HeaderMain">                      
         <div id="MainText">공부가 필요한 순간,<br> 언제 어디서나</div> 
         <div id="Download">
-            <div id="DownloadText">
+            <div id="DownloadText" @click="myFunction()">
                 앱 다운로드
+                <div v-if="andriod">
+                    <a href='https://play.google.com/store/apps/details?id=com.filledu.pulda2&pli=1'>앱 다운로드</a>
+                </div>
+                <div v-else-if="ipone">
+                    <a href='https://https://apps.apple.com/app/id1530892838'>앱 다운로드</a>
+                </div>
             </div>
-        </div>   
+        </div>
         <div id = "DownButton">
             <img id = "DownButtonImg" src="../img/Header/DownButton.png"/>
         </div> 
@@ -29,9 +53,28 @@
 </template>
 
 <script>
-export default {
-
-}
+  export default{
+        data: function() {
+        return {
+                    result: ''
+                };
+        },  
+        methods:{
+            myFunction: function () {
+                var ua = navigator.userAgent.toLocaleLowerCase();		
+                if(ua.indexOf('andriod') > -1){
+                    console.log('andriod');
+                    this.result = 'andriod';
+                } else if(ua.indexOf('ipone') > -1){
+                    console.log('ipone');
+                    this.result ='ipone';
+                }else{
+                    console.log('other')  ;
+                    this.result ='other';
+                }	 
+            }
+        }
+    }
 </script>
 
 <style>
@@ -147,6 +190,125 @@ export default {
         font-style: normal;
         font-weight: 700;
     }
- 
+    #nav{
+        margin: 0;
+        padding: 0;
+        display: inline;
+    }
+    #nav li{
+        display: inline;
+    }
+    #nav,#toggle{
+        display: none;
+    }
+    .menu {
+        width: 360px;
+        overflow: hidden;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  height: 180px;
+  max-width: 0;
+  transition: 0.5s ease;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.burger-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  padding: 8px 0;
+  top: 20px;
+  right: 4px;
+  user-select: none;
+  width: auto;
+  margin: 0;
+}
+
+.burger-icon .burger-sticks {
+  background: #8E8E8E;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: background .2s ease-out;
+   width: 18px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+    background: #8E8E8E;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+  top: 5px;
+}
+
+.burger-icon .burger-sticks:after {
+  top: -5px;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked~.menu {
+  max-width: 400px;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks {
+  background: transparent;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:before {
+  transform: rotate(-45deg);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
+}
+
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
+}
+#HiddenMenuContent1{
+
+    text-decoration: none;
+        color: #737373;
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 271px;
+}
+#HiddenMenuContent2{
+
+text-decoration: none;
+    color: #737373;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 233px;
+}
+ a:hover{
+    background-color: #F0F3F8;
     
+}
  </style>         

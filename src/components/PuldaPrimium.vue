@@ -1,5 +1,5 @@
 <template>
-    <div id = "Premium" class = "Premium">
+    <div id = "Premium" class = "Premium" @scroll="handleScroll">
         <div class ="PremiumTopText">
             <p id = PremiumTopText>
                 풀다 프리미엄 서비스로<br>
@@ -7,16 +7,16 @@
             </p>
         </div>
         <div class="Chart">
-            <div class ="DownChart">
-                <p id="DownChartTopText">교재로만 공부한 학생</p>
-                <img id="DownChartImg" src="../img/Premium/DownChart.png" />
-                <p id="DownChartBottomText">점점 낮아지는 동기부여</p>
-            </div>
-            <div class ="PuldaChart">
-                <p id="PuldaChartTopText">꾸준히 풀다를 사용한 학생</p>
-                <img id="PuldaChartImg" src="../img/Premium/PuldaChart.png" />
-                <p id="PuldaChartBottomText">자신감과 동기부여 상승</p>
-            </div>
+               <div class ="DownChart">
+                    <p id="DownChartTopText">교재로만 공부한 학생</p>
+                    <img id="DownChartImg" src="../img/Premium/DownChart.png" />
+                    <p id="DownChartBottomText">점점 낮아지는 동기부여</p>
+                </div>
+                <div class ="PuldaChart">
+                    <p id="PuldaChartTopText">꾸준히 풀다를 사용한 학생</p>
+                    <img id="PuldaChartImg" src="../img/Premium/PuldaChart.png" />
+                    <p id="PuldaChartBottomText">자신감과 동기부여 상승</p>
+                </div> 
         </div>
         <div class ="Subscribe">
             <button id= "SubscribeButton" 
@@ -28,7 +28,39 @@
     </div>
 </template>
 <script>
+    // 1번 실패 방법
+    //export default {
+    //     data() {
+    //         return {
+    //             scrollPostion : 0
+    //         }
+    //     },
+    //     method: {
+    //         handleScroll(e){
+    //             this.scrollPostion = e.target.scrollTop;
 
+    //             if(this.scrollPosition > 100){
+    //                 console.log("UP")
+    //             } else {
+    //                 console.log("DOWN")
+    //             }
+
+    //         }
+    //     }
+    // };
+    // 2번 실패 방법
+    // export default {
+    //     data() {
+    //         return {
+    //         scrollTop: 0,
+    //         };
+    //     },
+    //     methods: {
+    //         handleScroll(event) {
+    //         this.scrollTop = event.currentTarget.scrollTop;
+    //         },
+    //     },
+    // };
 </script>
 <style scoped>
     .Premium{
@@ -50,13 +82,19 @@
     .Chart{
         margin-top: 40px;
         display: flex;
+        margin-left: 50px;
+        overflow:auto; 
+      
+        width: 310px;
     }
+
     .DownChart{
         background-color: #fff;
         width: 261px;
         height: 339px;
         border-radius: 20px;
         box-shadow: 3px 20px 46px 0px #777A9433;
+        margin-right: 10px;
 
        
     }

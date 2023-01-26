@@ -18,7 +18,7 @@
   import PuldaIntroduceFunctionTwo from './components/PuldaIntroduceFunctionTwo.vue';
   import PuldaReview from './components/PuldaReview.vue';
   import PuldaDevice from './components/PuldaDevice.vue';
-  import PuldaDownload from './components/PuldaDownload.vue';
+  import PuldaDownload from './components/PuldaDown.vue';
   import PuldaFooter from './components/PuldaFooter.vue';
 import PuldaDreamFill from './components/PuldaDreamFill.vue';
 import PuldaPrimium from './components/PuldaPrimium.vue';
@@ -37,7 +37,7 @@ import PuldaPrimium from './components/PuldaPrimium.vue';
     PuldaFooter,
     PuldaDreamFill,
         PuldaPrimium,
-}
+},
   }
 </script>
 

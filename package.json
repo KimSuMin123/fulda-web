@@ -10,7 +10,11 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "core-js": "^3.8.3",
+    "jquery": "^3.6.0",
+    "router": "^1.3.7",
+    "swiper": "^8.4.6",
     "vue": "^3.2.13",
+    "vue-awesome-swiper": "^5.0.1",
     "vue-tiny-slider": "^0.1.39",
     "vuex": "^4.0.0"
   },

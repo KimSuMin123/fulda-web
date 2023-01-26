@@ -46,7 +46,8 @@
                 풀다 포인트로 상점도 이용하고 맞춤 혜택까지!
             </p>
             <div class="RankingImg">
-                <img id="RankingImg" src="../img/Ranking/Ranking.png"/>
+                <img id="RankingImg" src="../img/Ranking/Ranking1.png"/>
+                <img id="RankingImg" src="../img/Ranking/Ranking2.png"/>
             </div>
         </div>
         <div class = "Scholarship">
@@ -70,9 +71,7 @@
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>
@@ -209,11 +208,18 @@ export default {
         color: #1e1e1e;
         margin-left: 30px;
     }
+    .RankingImg{
+        width: 340px;
+        display: flex;
+        overflow: auto;
+        margin-left: 18px;
+    }
+
     #RankingImg{
         width: 289px;
         height: 314px;
-        margin-left: 18px;
         margin-top: 35px;
+        margin-left: 10px;
     }  
     .Scholarship{
         height: 695px;

@@ -21,8 +21,8 @@
                 <p id="StudentReview1">
                     시간이 애매하게 남을 때 공부하기 좋은 어플이에요!<br>
                     기출 문제가 나오는 것과 해설도 있는 것,<br>
-                    그리고 풀이 시간도 제한되어 있는 것 등등 앱을 세심하게<br>
-                    만드신게 보여요. 감사히 잘 쓰겠습니다.<br>
+                    그리고 풀이 시간도 제한되어 있는 것 등등 앱을<br>
+                    세심하게 만드신게 보여요. 감사히 잘 쓰겠습니다.<br>
                     이런 앱 많이 만들어 주세요!
                 </p>
             </div>
@@ -47,7 +47,7 @@ export default {
     #ReviewImg{
         width: 43px;
         height: 35px;
-        margin-top: 180px;
+        padding-top: 185px;
         margin-left: 203px;
     }
     .ReviewTop{
@@ -67,7 +67,7 @@ export default {
     }
    
     #ReviewBox1{
-        width: 460px;
+        width: 360px;
         height: 208px;
         background-color: #F8FAFC;
         border-radius: 30px;
@@ -75,7 +75,7 @@ export default {
         margin-top: 60px;
     }
     #StudentNickname1{
-        padding-left: 55px;
+        padding-left: 30px;
         padding-top: 40px;
         font-family: Pretendard;
         font-size: 20px;
@@ -84,9 +84,9 @@ export default {
     }
     #StudentReview1{
         padding-top: 20px;
-        padding-left: 55px;
+        padding-left: 30px;
         font-family: Pretendard;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 19px;
         letter-spacing: 0em;
