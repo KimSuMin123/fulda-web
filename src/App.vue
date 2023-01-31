@@ -53,14 +53,14 @@ export default {
   },
   watch:{
     scrollTop(){
-      if(this.scrollTop > 500){
+      if(this.scrollTop > 300){
         this.SizeDown = true;
         this.$refs.PuldaHeader.SizeDown = true;
         console.log(this.SizeDown);
         console.log(this.$refs.PuldaHeader.SizeDown);
         return this.SizeDown
       }
-      if(this.scrollTop < 500){
+      if(this.scrollTop < 300){
         this.SizeDown = false;
         this.$refs.PuldaHeader.SizeDown = false;
         console.log(this.SizeDown);

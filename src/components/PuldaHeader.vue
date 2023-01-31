@@ -112,7 +112,7 @@
         url('../img/Header/HeaderMain.png') center center;
         background-size: cover;
         background-color: black;
-        margin-top: 500px;
+        margin-top: 900px;
         width:1200px;
         height: 224px;
         margin-left: 360px;
