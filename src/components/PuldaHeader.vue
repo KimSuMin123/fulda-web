@@ -26,9 +26,9 @@
                 </nav>
             </div>
         </div>
-        <div id ="HeaderMain1">                      
+        <div class ="HeaderMain1" ref="PuldaHeader" v-bind:class="{ 'HeaderMain2' : SizeDown }">                      
             <div id="MainText">공부가 필요한 순간, 언제 어디서나</div> 
-            <div class="Download">
+            <div class="Download1" ref="PuldaHeader" v-bind:class="{ 'Download2' :SizeDown }">
             <div id= "AppStoreButton">
                 <a id="AppStoreLink" href="https://apps.apple.com/app/id1530892838">
                     <img id="AppStoreImg" src="../img/Footer/ColorAppStore.png" />
@@ -49,23 +49,25 @@
                 <img class="ChannelTalkImg" src="../img/Header/ChannelTalk.png" />
             </div>
         </div>
-        <div id ="HeaderMain2">
-        </div>
+        
     </div>    
   
 </template>
  
  <script>
- 
- export default {
-   methods: {
-    goPage() {
-        console.log('go')
+    export default {
+        name:"PuldaHeader",
+        data: function() {
+            return {
+                SizeDown : false
+            }
+        }
+        // props :{
+        //     SizeDown : {
+        //         type: Boolean
+        //     }
+        // }
     }
-   }
-}
-    
- 
  </script>
  
  <style>
@@ -96,7 +98,7 @@
         margin-right : 139px;
     }
 
-   #HeaderMain1{
+   .HeaderMain1{
         background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
         url('../img/Header/HeaderMain.png') center center;
         background-size: cover;
@@ -105,23 +107,21 @@
         height: 1005px;
         margin-top: 75px;
     }
-    #HeaderMain2{
+   .HeaderMain2{
         background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
         url('../img/Header/HeaderMain.png') center center;
         background-size: cover;
         background-color: black;
-        margin-top: 50px;
+        margin-top: 500px;
         width:1200px;
         height: 224px;
         margin-left: 360px;
-    }
-
-   
-    /* #HeaderMain:hover {
-        transform: scale(0.7);
+    } 
+     /* #HeaderMain1:hover 
+      {
+        transform: scale(0.65);
         transition: .9s;
-    } */
-
+    }  */
    
     #MainText{
         padding-left: 628px;
@@ -132,10 +132,13 @@
         line-height: 50px;
         color: #ffffff;
     }
-    .Download{
+    .Download1{
         margin-top: 62px;
         display: flex;
         
+    }
+    .Download2{
+        display: none;
     }
     #AppStoreButton{
         width: 197px;

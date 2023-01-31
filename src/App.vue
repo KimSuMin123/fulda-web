@@ -1,16 +1,18 @@
 <template>
- <div id="app">
-    <PuldaHeader />
-    <PuldaStart />
-    <PuldaIntroduceOne />
-    <PuldaIntroduceTwo />              
-    <PuldaIntroduceFunctionOne />
-    <PuldaIntroduceFunctionTwo />
-    <PuldaDreamFill />
-    <PuldaReview /> 
-    <PuldaPremium />
-    <PuldaDevice />   
-    <PuldaFooter />
+ <div id="app"> 
+    <div @scroll="scrolling">
+      <PuldaHeader ref="PuldaHeader" />
+      <PuldaStart />
+      <PuldaIntroduceOne />
+      <PuldaIntroduceTwo />              
+      <PuldaIntroduceFunctionOne />
+      <PuldaIntroduceFunctionTwo />
+      <PuldaDreamFill />
+      <PuldaReview /> 
+      <PuldaPremium />
+      <PuldaDevice />   
+      <PuldaFooter />
+    </div>
   </div>
 </template>
 
@@ -28,6 +30,14 @@ import PuldaDevice from './components/PuldaDevice.vue';
 import PuldaFooter from './components/PuldaFooter.vue';
 export default {
   name: 'App',
+  data() {
+    return {
+      isScrollDown: false,   
+      scrollTop: 0,                    
+      target: null, 
+      SizeDown : false
+    }
+  },
   components: {
     PuldaHeader,
     PuldaStart,
@@ -40,8 +50,41 @@ export default {
     PuldaPremium,
     PuldaDevice,
     PuldaFooter
-}
-}
+  },
+  watch:{
+    scrollTop(){
+      if(this.scrollTop > 500){
+        this.SizeDown = true;
+        this.$refs.PuldaHeader.SizeDown = true;
+        console.log(this.SizeDown);
+        console.log(this.$refs.PuldaHeader.SizeDown);
+        return this.SizeDown
+      }
+      if(this.scrollTop < 500){
+        this.SizeDown = false;
+        this.$refs.PuldaHeader.SizeDown = false;
+        console.log(this.SizeDown);
+        console.log(this.$refs.PuldaHeader.SizeDown);
+        return this.SizeDown
+      }
+    }
+  },
+
+  methods: {
+   scrollEvents() {
+    //  console.log(document.documentElement.scrollTop)
+     this.scrollTop = document.documentElement.scrollTop;
+   }, 
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+    document.addEventListener('scroll', this.scrollEvents);
+  },
+   unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents);
+  },
+};
+
 </script>
 
 <style>
