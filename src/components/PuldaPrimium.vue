@@ -6,8 +6,8 @@
                 AI 맞춤형 학습부터<br>동기부여까지! 
             </p>
         </div>
-        <div class="Chart">
-               <div class ="DownChart">
+        <div class="Chart1" v-bind:class="{'Chart2' : SlideTwo}">
+               <div class ="DownChart1"  v-bind:class="{'DownChart2' : SlideTwo}">
                     <p id="DownChartTopText">교재로만 공부한 학생</p>
                     <img id="DownChartImg" src="../img/Premium/DownChart.png" />
                     <p id="DownChartBottomText">점점 낮아지는 동기부여</p>
@@ -28,39 +28,14 @@
     </div>
 </template>
 <script>
-    // 1번 실패 방법
-    //export default {
-    //     data() {
-    //         return {
-    //             scrollPostion : 0
-    //         }
-    //     },
-    //     method: {
-    //         handleScroll(e){
-    //             this.scrollPostion = e.target.scrollTop;
-
-    //             if(this.scrollPosition > 100){
-    //                 console.log("UP")
-    //             } else {
-    //                 console.log("DOWN")
-    //             }
-
-    //         }
-    //     }
-    // };
-    // 2번 실패 방법
-    // export default {
-    //     data() {
-    //         return {
-    //         scrollTop: 0,
-    //         };
-    //     },
-    //     methods: {
-    //         handleScroll(event) {
-    //         this.scrollTop = event.currentTarget.scrollTop;
-    //         },
-    //     },
-    // };
+   export default {
+        name:"PuldaPrimium",
+        data: function() {
+            return {
+                SlideTwo : false
+            }
+        }
+    }
 </script>
 <style scoped>
     .Premium{
@@ -79,7 +54,7 @@
         text-align: center;
         padding-top: 110px;
     }
-    .Chart{
+    .Chart1{
         margin-top: 40px;
         display: flex;
         margin-left: 50px;
@@ -87,16 +62,24 @@
       
         width: 310px;
     }
+    .Chart2{
+        margin-top: 40px;
+        display: flex;
+        margin-left: 50px;
+        overflow:auto; 
+        width: 310px;
+    }
 
-    .DownChart{
+    .DownChart1{
         background-color: #fff;
         width: 261px;
         height: 339px;
         border-radius: 20px;
         box-shadow: 3px 20px 46px 0px #777A9433;
-        margin-right: 10px;
-
-       
+        margin-right: 10px;   
+    }
+    .DownChart2{
+        display: none;
     }
     #DownChartTopText{
         font-family: Pretendard;

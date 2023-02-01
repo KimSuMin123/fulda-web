@@ -45,9 +45,9 @@
                 공부하고 랭킹 점수를 쌓아서<br> 풀다 장학생이 되어보세요.<br>
                 풀다 포인트로 상점도 이용하고 맞춤 혜택까지!
             </p>
-            <div class="RankingImg">
-                <img id="RankingImg" src="../img/Ranking/Ranking1.png"/>
-                <img id="RankingImg" src="../img/Ranking/Ranking2.png"/>
+            <div class="RankingImgAll1" v-bind:class="{'RankingImgAll2' : SlideOne}">
+                <img id="RankingImg1" v-bind:class="{'RankingImg2' : SlideOne}" src="../img/Ranking/Ranking1.png"/>
+                <img id="RankingImg1" src="../img/Ranking/Ranking2.png"/>
             </div>
         </div>
         <div class = "Scholarship">
@@ -71,7 +71,14 @@
 </template>
 
 <script>
-
+    export default {
+        name:"PuldaIntroduceFunctionTwo",
+        data: function() {
+            return {
+                SlideOne : false
+            }
+        }
+    }
 </script>
 
 <style>
@@ -208,19 +215,22 @@
         color: #1e1e1e;
         margin-left: 30px;
     }
-    .RankingImg{
+    .RankingImgAll1{
         width: 340px;
         display: flex;
         overflow: auto;
         margin-left: 18px;
     }
 
-    #RankingImg{
+    #RankingImg1{
         width: 289px;
         height: 314px;
         margin-top: 35px;
         margin-left: 10px;
     }  
+    .RankingImg2{
+        display: none;
+    }
     .Scholarship{
         height: 695px;
         width: 360px;
@@ -278,4 +288,5 @@
             transform: translateY(15px);
         }
     } 
+  
 </style>
