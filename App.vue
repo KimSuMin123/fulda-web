@@ -1,16 +1,18 @@
 <template>
- <div id="app">
-    <PuldaHeader />
-    <PuldaStart />
-    <PuldaIntroduceOne />
-    <PuldaIntroduceTwo />              
-    <PuldaIntroduceFunctionOne />
-    <PuldaIntroduceFunctionTwo />
-    <PuldaDreamFill />
-    <PuldaReview /> 
-    <PuldaPremium />
-    <PuldaDevice />   
-    <PuldaFooter />
+ <div id="app"> 
+    <div @scroll="scrolling">
+      <PuldaHeader ref="PuldaHeader" />
+      <PuldaStart />
+      <PuldaIntroduceOne />
+      <PuldaIntroduceTwo />              
+      <PuldaIntroduceFunctionOne />
+      <PuldaIntroduceFunctionTwo />
+      <PuldaDreamFill />
+      <PuldaReview /> 
+      <PuldaPremium />
+      <PuldaDevice />   
+      <PuldaFooter />
+    </div>
   </div>
 </template>
 
@@ -28,6 +30,17 @@ import PuldaDevice from './components/PuldaDevice.vue';
 import PuldaFooter from './components/PuldaFooter.vue';
 export default {
   name: 'App',
+  data() {
+    return {
+      isScrollDown: false,   
+      scrollTop: 0,                    
+      target: null, 
+      SizeDown : false,
+      introduce : true,
+      review : false,
+      premium :false
+    }
+  },
   components: {
     PuldaHeader,
     PuldaStart,
@@ -40,8 +53,46 @@ export default {
     PuldaPremium,
     PuldaDevice,
     PuldaFooter
-}
-}
+  },
+  watch:{
+    scrollTop(){
+      /*console.log(this.scrollTop);
+      if( 8411<this.scrollTop<9308){
+        this.$refs.PuldaHeader.introduce = false;
+        this.$refs.PuldaHeader.review = true;
+        return this.introduce, this.review
+      }
+      if(9308<this.scrollTop){
+        this.$refs.PuldaHeader.review = false;
+        this.$refs.PuldaHeader.premium = true;
+        return this.review, this.premium
+      }*/
+      if(this.scrollTop > 300){
+        this.$refs.PuldaHeader.SizeDown = true;
+        return this.SizeDown
+      }
+      if(this.scrollTop < 300){
+        this.$refs.PuldaHeader.SizeDown = false;
+        return this.SizeDown
+      }
+    }
+  },
+
+  methods: {
+   scrollEvents() {
+    //  console.log(document.documentElement.scrollTop)
+     this.scrollTop = document.documentElement.scrollTop;
+   }, 
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+    document.addEventListener('scroll', this.scrollEvents);
+  },
+   unmounted() {
+    document.removeEventListener('scroll', this.scrollEvents);
+  },
+};
+
 </script>
 
 <style>
@@ -52,5 +103,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+}
+#app::-webkit-scrollbar{
+  display: none;
+  overflow-x: none;
 }
 </style>

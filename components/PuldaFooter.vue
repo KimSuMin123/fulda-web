@@ -44,9 +44,8 @@
             </a>
         
             <div id="SeeMoreText">
-         
-                        <p id="SeeMoreText1">관련 사이트</p>
-                        <p id="SeeMoreText2">+</p>
+                <p id="SeeMoreText1">관련 사이트</p>
+                <p id="SeeMoreText2">+</p>
                  
             
             </div>

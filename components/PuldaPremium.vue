@@ -1,5 +1,4 @@
 <template>
-    <h1>psppspsps</h1.
     <div id = "Premium" class = "Premium">
         <div class ="PremiumTopText">
             <p id = PremiumTopText>

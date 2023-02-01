@@ -8,17 +8,17 @@
             </div>
             <div id = "HeaderMenu">
                 <nav>
-                    <span class="introduce">
+                    <span class="introduce1" v-bind:class="{ 'introduce2' : introduce }">
                         <a href="#Header">
                             풀다 소개
                         </a>
                     </span>
-                    <span class="review">
+                    <span class="review1" v-bind:class="{ 'review2' : review }">
                         <a href="#Review">
                             REVIEW
                         </a>
                     </span>
-                    <span class="premium">
+                    <span class="premium1" v-bind:class="{ 'premium2' : premium }">
                         <a href="#Premium">
                             프리미엄서비스
                         </a>
@@ -26,9 +26,9 @@
                 </nav>
             </div>
         </div>
-        <div id ="HeaderMain">                      
+        <div class ="HeaderMain1" ref="PuldaHeader" v-bind:class="{ 'HeaderMain2' : SizeDown }">                      
             <div id="MainText">공부가 필요한 순간, 언제 어디서나</div> 
-            <div class="Download">
+            <div class="Download1" ref="PuldaHeader" v-bind:class="{ 'Download2' :SizeDown }">
             <div id= "AppStoreButton">
                 <a id="AppStoreLink" href="https://apps.apple.com/app/id1530892838">
                     <img id="AppStoreImg" src="../img/Footer/ColorAppStore.png" />
@@ -49,21 +49,23 @@
                 <img class="ChannelTalkImg" src="../img/Header/ChannelTalk.png" />
             </div>
         </div>
+        
     </div>    
   
 </template>
  
  <script>
- 
- export default {
-   methods: {
-    goPage() {
-        console.log('go')
+    export default {
+        name:"PuldaHeader",
+        data: function() {
+            return {
+                SizeDown : false,
+                introduce : true,
+                review : false,
+                premium :false
+            }
+        }
     }
-   }
-}
-    
- 
  </script>
  
  <style>
@@ -94,7 +96,7 @@
         margin-right : 139px;
     }
 
-   #HeaderMain{
+   .HeaderMain1{
         background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
         url('../img/Header/HeaderMain.png') center center;
         background-size: cover;
@@ -103,13 +105,21 @@
         height: 1005px;
         margin-top: 75px;
     }
-
-    /* 스크롤 내릴떄로 변경하기 
-    #HeaderMain:hover {
-        transform: scale(0.7);
+   .HeaderMain2{
+        background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+        url('../img/Header/HeaderMain.png') center center;
+        background-size: cover;
+        background-color: black;
+        margin-top: 900px;
+        width:1200px;
+        height: 224px;
+        margin-left: 360px;
+    } 
+     /* #HeaderMain1:hover 
+      {
+        transform: scale(0.65);
         transition: .9s;
-    }
-     */
+    }  */
    
     #MainText{
         padding-left: 628px;
@@ -120,10 +130,13 @@
         line-height: 50px;
         color: #ffffff;
     }
-    .Download{
+    .Download1{
         margin-top: 62px;
         display: flex;
         
+    }
+    .Download2{
+        display: none;
     }
     #AppStoreButton{
         width: 197px;
@@ -232,13 +245,20 @@
         margin-top: 67px;
         margin-left: 1822px;
     }
-    a{
+    .introduce1 a,.review1 a, .premium1 a{
         text-decoration: none;
         color: #737373;
         font-family: 'Pretendard';
         font-style: normal;
         font-weight: 700;
     }
-   
-    
+    .introduce2 a,.review2 a, .premium2 a{
+        color: #1e1e1e;
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 700;
+        text-decoration: underline 3px #1e1e1e;
+        text-underline-position: under ;
+    }
+  
  </style>         

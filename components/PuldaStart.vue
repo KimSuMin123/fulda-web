@@ -19,6 +19,7 @@
     margin-top: 50px;
     margin-left: 839px;        
     margin-bottom: 35px;
+    margin-top: 210px;
 }
 #StartText1{
     font-family: Pretendard;
